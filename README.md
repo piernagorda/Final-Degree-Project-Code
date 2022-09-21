@@ -1,6 +1,6 @@
 # Final Degree Project Code
 
-In this folder you can find the following code:
+In this repository you can find the following code:
 
 - FILE: Accelerate-vs-GPU.swift
 - FOLDER: Firestorm-vs-Firestorm+Icestorm
@@ -30,6 +30,8 @@ Inside the folder we can find both the single (sgemm) and double (dgemm) precisi
 This folder contains most of the code of the project. It contains tests with 1, 2 and 4 threads of OpenBLAS, BLIS and BLIS for M1 Macs (called BLIS AMX from the AMX Coprocessor). Accelerate usually runs single threaded and the number of threads cannot be modified (this is done by the GCD of macOS). When the workload is small-medium, Accelerate runs single threaded. However, when the workload increases, macOS uses more threads (a number that cannot be determined before running the tests, since it varies for each execution).
 
 For each library we have tests in single and double precision and most of them include a Makefile. The installation of BLIS is very straight forward. However, OpenBLAS and BLIS AMX require a bit more of extra work (multithreading has to be enabled while configuring the installation and attention has to be paid!).
+
+There are certain files taken from BLIS (the files that contain assembly language) that are needed, since otherwise they'll cause conflict with the library. They've been renamed and slightly modified for the purpose of the project. However, I take zero credit for those files. All the credit goes to the creator of those files. 
 
 Sources: 
 
