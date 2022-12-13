@@ -1,6 +1,6 @@
 # Final Degree Project Code
 
-In this repository you can find the following code:
+In this repository you will find the following code:
 
 - FILE: Accelerate-vs-GPU.swift
 - FOLDER: Firestorm-vs-Firestorm+Icestorm
